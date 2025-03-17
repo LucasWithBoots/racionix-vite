@@ -1,7 +1,14 @@
+import { Route, Routes } from "react-router";
+import Games from "./pages/Games";
+import Header from "./components/navigation/Header";
+
 function App() {
   return (
     <>
-      <p className="text-3xl font-bold underline">teste</p>
+      <Header />
+      <Routes>
+        <Route path="/games" element={<Games />} />
+      </Routes>
     </>
   );
 }

@@ -1,1 +1,38 @@
 @import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@theme {
+  --color-cerulean-300: #a1ebff;
+  --color-cerulean-500: #00c3f7;
+  --font-display: "Bowlby One SC", "sans-serif";
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.h1-style {
+  @apply text-6xl font-bold text-gray-900 dark:text-white font-display;
+}
+
+.header-item {
+  @apply font-[Poppins] font-bold text-white text-2xl uppercase w-full text-center h-full items-center justify-center flex hover:bg-cerulean-300;
+}
