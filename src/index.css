@@ -18,6 +18,8 @@
 @theme {
     --color-cerulean-300: #a1ebff;
     --color-cerulean-500: #00c3f7;
+    --color-pink-salmon-300: #fc90a2;
+    --color-school-bus-yellow-500: #ffe000;
     --font-display: "Bowlby One SC", "sans-serif";
 }
 
@@ -25,8 +27,8 @@ body {
     margin: 0;
     display: flex;
     place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 .h1-style {

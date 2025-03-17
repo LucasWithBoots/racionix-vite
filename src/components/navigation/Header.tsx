@@ -7,9 +7,9 @@ export default function HeaderNavigation() {
                 Jogos
             </NavLink>
             <NavLink to="/login" end className="header-item">
-                Login/Registro
+                Login
             </NavLink>
-            <NavLink to="/leaderboard" end className="header-item">
+            <NavLink to="/" end className="header-item">
                 Placar
             </NavLink>
         </nav>
