@@ -1,10 +1,8 @@
 export default function GameButton({
-    url,
     cover,
     subtitle,
     title,
 }: {
-    url: string;
     cover: string;
     subtitle: string;
     title: string;
