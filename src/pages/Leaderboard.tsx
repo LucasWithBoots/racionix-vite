@@ -19,8 +19,16 @@ export default function Leaderboard() {
         <div className="bg-[#94E38B] w-screen h-screen pt-15 px-20">
             <h1 className="h1-style mb-15">Placar</h1>
             <div className="grid grid-cols-2 gap-20">
-                <LeaderboardItem title="Campo Minado" scores={exampleScores} />
-                <LeaderboardItem title="Sudoku" scores={exampleScores} />
+                <LeaderboardItem
+                    title="Campo Minado"
+                    scores={exampleScores}
+                    backgroundColor="#63BC85"
+                />
+                <LeaderboardItem
+                    title="Sudoku"
+                    scores={exampleScores}
+                    backgroundColor="#00C3F7"
+                />
             </div>
         </div>
     );

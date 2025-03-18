@@ -2,9 +2,11 @@ import { IIndividualScore } from "../interfaces/IIndividualScore";
 
 export default function LeaderboardItem({
     title,
+    backgroundColor,
     scores,
 }: {
     title: string;
+    backgroundColor: string;
     scores: IIndividualScore[];
 }) {
     const listScores = scores.map((score) => (
@@ -32,8 +34,9 @@ export default function LeaderboardItem({
     return (
         <div
             className={
-                "bg-cerulean-500 flex flex-col items-center font-[Poppins] h-min rounded-xl"
+                "flex flex-col items-center font-[Poppins] h-min rounded-xl"
             }
+            style={{ backgroundColor: backgroundColor }}
         >
             <p className="uppercase font-bold text-4xl py-10">{title}</p>
             <div className="bg-white w-full p-10 rounded-t-3xl rounded-b-xl flex flex-col gap-5">
