@@ -22,12 +22,16 @@ export default function Login() {
                             <InputField
                                 label="E-mail"
                                 name="email"
-                                register={register}
+                                register={register("email", { required: true })}
+                                type="email"
                             />
                             <InputField
                                 label="Senha"
                                 name="password"
-                                register={register}
+                                register={register("password", {
+                                    required: true,
+                                })}
+                                type="password"
                             />
                         </div>
                         <div className="h-10" />

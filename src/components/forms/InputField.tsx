@@ -1,13 +1,19 @@
-import { UseFormRegister } from "react-hook-form";
+import {
+    RegisterOptions,
+    UseFormRegister,
+    UseFormRegisterReturn,
+} from "react-hook-form";
 
 export default function InputField({
     label,
     name,
     register,
+    type,
 }: {
     label: string;
     name: string;
-    register: UseFormRegister<any>;
+    register: UseFormRegisterReturn;
+    type: React.HTMLInputTypeAttribute;
 }) {
     return (
         <div className="flex flex-col gap-3">
@@ -15,8 +21,9 @@ export default function InputField({
                 {label}
             </label>
             <input
-                {...register(name)}
+                {...register}
                 className="bg-white h-16 w-100 text-black px-2"
+                type={type}
             />
         </div>
     );
