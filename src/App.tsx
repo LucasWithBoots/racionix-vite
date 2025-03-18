@@ -5,6 +5,8 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Leaderboard from "./pages/Leaderboard";
 import Register from "./pages/Register";
+import Sudoku from "./pages/games/Sudoku";
+import Minesweeper from "./pages/games/Minesweeper";
 
 function App() {
     return (
@@ -16,6 +18,8 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/leaderboard" element={<Leaderboard />} />
+                <Route path="/games/sudoku" element={<Sudoku />} />
+                <Route path="/games/minesweeper" element={<Minesweeper />} />
             </Routes>
         </>
     );
