@@ -1,5 +1,6 @@
 import LeaderboardItem from "../components/LeaderboardItem";
 import { IIndividualScore } from "../interfaces/IIndividualScore";
+import setBodyColor from "../util/BodyColor";
 
 const exampleScores: IIndividualScore[] = [
     { position: 1, name: "Alice", score: 2500 },
@@ -15,8 +16,10 @@ const exampleScores: IIndividualScore[] = [
 ];
 
 export default function Leaderboard() {
+    setBodyColor({ color: "#94E38B" });
+
     return (
-        <div className="bg-[#94E38B] w-screen h-screen pt-15 px-20">
+        <div className="pt-15 px-20">
             <h1 className="h1-style mb-15">Placar</h1>
             <div className="grid grid-cols-2 gap-20">
                 <LeaderboardItem

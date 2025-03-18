@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import InputField from "../components/forms/InputField";
 import SubmitButton from "../components/forms/SubmitButton";
 import { NavLink } from "react-router";
+import setBodyColor from "../util/BodyColor";
 
 interface IFormInput {
     email: string;
@@ -9,6 +10,8 @@ interface IFormInput {
 }
 
 export default function Login() {
+    setBodyColor({ color: "#ffe000" });
+
     const {
         register,
         handleSubmit,
@@ -18,7 +21,7 @@ export default function Login() {
     const onSubmit = (data: IFormInput) => console.log(data);
 
     return (
-        <div className="bg-school-bus-yellow-500 h-screen w-screen  grid grid-cols-2">
+        <div className="h-screen w-screen  grid grid-cols-2">
             <div className="pt-15 px-20">
                 <h1 className="h1-style mb-15">Login</h1>
                 <div>

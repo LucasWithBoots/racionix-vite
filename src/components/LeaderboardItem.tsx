@@ -39,7 +39,7 @@ export default function LeaderboardItem({
             style={{ backgroundColor: backgroundColor }}
         >
             <p className="uppercase font-bold text-4xl py-10">{title}</p>
-            <div className="bg-white w-full p-10 rounded-t-3xl rounded-b-xl flex flex-col gap-5">
+            <div className="bg-white w-full p-10 rounded-t-3xl rounded-b-xl flex flex-col gap-5 h-100 overflow-y-auto">
                 {listScores}
             </div>
         </div>
