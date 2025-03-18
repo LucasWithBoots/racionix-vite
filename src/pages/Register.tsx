@@ -1,14 +1,15 @@
 import { useForm } from "react-hook-form";
 import InputField from "../components/forms/InputField";
 import SubmitButton from "../components/forms/SubmitButton";
-import { NavLink } from "react-router";
 
 interface IFormInput {
+    fullName: string;
+    birthDate: string;
     email: string;
     password: string;
 }
 
-export default function Login() {
+export default function Register() {
     const {
         register,
         handleSubmit,
@@ -18,12 +19,36 @@ export default function Login() {
     const onSubmit = (data: IFormInput) => console.log(data);
 
     return (
-        <div className="bg-school-bus-yellow-500 h-screen w-screen  grid grid-cols-2">
+        <div className="bg-lime-300 h-screen w-screen  grid grid-cols-2">
+            <div className="bg-white">
+                <img
+                    src="city.jpg"
+                    className="h-full h object-cover brightness-70"
+                />
+            </div>
             <div className="pt-15 px-20">
-                <h1 className="h1-style mb-15">Login</h1>
+                <h1 className="h1-style mb-15">Cadastrar</h1>
                 <div>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="flex flex-col gap-10">
+                            <InputField
+                                label="Nome Completo"
+                                name="fullName"
+                                register={register("fullName", {
+                                    required: true,
+                                })}
+                                type="text"
+                                error={errors.email}
+                            />
+                            <InputField
+                                label="Data de Nascimento"
+                                name="birthDate"
+                                register={register("birthDate", {
+                                    required: true,
+                                })}
+                                type="date"
+                                error={errors.email}
+                            />
                             <InputField
                                 label="E-mail"
                                 name="email"
@@ -41,31 +66,16 @@ export default function Login() {
                                 error={errors.password}
                             />
                         </div>
-                        <div className="mt-10 flex gap-10">
+                        <div className="mt-10">
                             <SubmitButton
-                                value={"Logar"}
-                                type="submit"
-                                color="#A6EF18"
-                                shadow="#8DD108"
+                                value={"Cadastrar"}
+                                type={"submit"}
+                                color="#65D1CF"
+                                shadow="#55B4B2"
                             />
-                            <NavLink to="/register">
-                                <SubmitButton
-                                    value={"Cadastrar"}
-                                    type="button"
-                                    color="#65D1CF"
-                                    shadow="#55B4B2"
-                                />
-                            </NavLink>
                         </div>
                     </form>
                 </div>
-            </div>
-
-            <div className="bg-white">
-                <img
-                    src="FairyWorld.webp"
-                    className="h-full h object-cover brightness-70"
-                />
             </div>
         </div>
     );
