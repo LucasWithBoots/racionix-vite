@@ -1,12 +1,7 @@
-import {
-    RegisterOptions,
-    UseFormRegister,
-    UseFormRegisterReturn,
-} from "react-hook-form";
+import { UseFormRegisterReturn } from "react-hook-form";
 
 export default function InputField({
     label,
-    name,
     register,
     type,
 }: {

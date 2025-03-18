@@ -1,4 +1,4 @@
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import InputField from "../components/forms/InputField";
 import SubmitButton from "../components/forms/SubmitButton";
 
@@ -10,7 +10,7 @@ interface IFormInput {
 export default function Login() {
     const { register, handleSubmit } = useForm<IFormInput>();
 
-    const onSubmit = (data: any) => console.log(data);
+    const onSubmit = (data: IFormInput) => console.log(data);
 
     return (
         <div className="bg-school-bus-yellow-500 h-screen w-screen  grid grid-cols-2">
