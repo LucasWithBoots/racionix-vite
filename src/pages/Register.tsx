@@ -14,7 +14,7 @@ interface IFormInput {
 }
 
 export default function Register() {
-    let navigate = useNavigate();
+    const navigate = useNavigate();
 
     const {
         register,
