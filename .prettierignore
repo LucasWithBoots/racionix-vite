@@ -1,3 +1,4 @@
 # Ignore artifacts:
 build
 coverage
+racionix-spring/docker-compose.yml
