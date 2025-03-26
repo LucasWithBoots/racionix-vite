@@ -1,0 +1,94 @@
+{
+    "scores": [
+        {
+            "game": "minesweeper",
+            "scores": [
+                {
+                    "name": "João Silva",
+                    "score": 120
+                },
+                {
+                    "name": "Maria Oliveira",
+                    "score": 95
+                },
+                {
+                    "name": "Carlos Souza",
+                    "score": 80
+                },
+                {
+                    "name": "Ana Costa",
+                    "score": 65
+                },
+                {
+                    "name": "Pedro Santos",
+                    "score": 50
+                },
+                {
+                    "name": "Luiza Pereira",
+                    "score": 45
+                },
+                {
+                    "name": "Marcos Ferreira",
+                    "score": 30
+                },
+                {
+                    "name": "Julia Almeida",
+                    "score": 25
+                },
+                {
+                    "name": "Rafael Lima",
+                    "score": 20
+                },
+                {
+                    "name": "Fernanda Rocha",
+                    "score": 15
+                }
+            ]
+        },
+        {
+            "game": "sudoku",
+            "scores": [
+                {
+                    "name": "Lucas Martins",
+                    "score": 300
+                },
+                {
+                    "name": "Patrícia Nunes",
+                    "score": 275
+                },
+                {
+                    "name": "Gustavo Henrique",
+                    "score": 250
+                },
+                {
+                    "name": "Camila Dias",
+                    "score": 225
+                },
+                {
+                    "name": "Roberto Carvalho",
+                    "score": 200
+                },
+                {
+                    "name": "Amanda Reis",
+                    "score": 180
+                },
+                {
+                    "name": "Diego Melo",
+                    "score": 150
+                },
+                {
+                    "name": "Letícia Barbosa",
+                    "score": 125
+                },
+                {
+                    "name": "Felipe Castro",
+                    "score": 100
+                },
+                {
+                    "name": "Tatiane Monteiro",
+                    "score": 75
+                }
+            ]
+        }
+    ]
+}
