@@ -1,0 +1,10 @@
+services:
+    db_musicstore:
+        image: postgres
+        container_name: racionix-db
+        environment:
+            POSTGRES_DB: racionix
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: senha
+        ports:
+            - "5432:5432"

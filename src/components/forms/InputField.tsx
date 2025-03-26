@@ -22,6 +22,7 @@ export default function InputField({
                     {...register}
                     className="bg-white h-16 w-100 text-black px-2"
                     type={type}
+                    style={{ boxShadow: `0px 10px 0px #9F9F9F` }}
                 />
                 {error && (
                     <p className="text-red-500 font-[Poppins] font-regular text-sm">

@@ -3,6 +3,8 @@ import InputField from "../components/forms/InputField";
 import SubmitButton from "../components/forms/SubmitButton";
 import { NavLink } from "react-router";
 import setBodyColor from "../util/BodyColor";
+import { toast } from "react-toastify";
+import { loginRequest } from "../http/Auth";
 
 interface IFormInput {
     email: string;
@@ -18,7 +20,22 @@ export default function Login() {
         formState: { errors },
     } = useForm<IFormInput>();
 
-    const onSubmit = (data: IFormInput) => console.log(data);
+    const onSubmit = async (data: IFormInput) => {
+        const user = {
+            email: data.email,
+            password: data.password,
+        };
+
+        try {
+            await toast.promise(loginRequest(user), {
+                pending: "Entrnado...",
+                success: "Conta logada com sucesso!",
+                error: "Algo deu errado!",
+            });
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     return (
         <div className="h-screen w-screen  grid grid-cols-2">

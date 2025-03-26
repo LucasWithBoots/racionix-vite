@@ -1,6 +1,10 @@
 import { useForm } from "react-hook-form";
 import InputField from "../components/forms/InputField";
 import SubmitButton from "../components/forms/SubmitButton";
+import { IUser } from "../interfaces/IUser";
+import { registerRequest } from "../http/Auth";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router";
 
 interface IFormInput {
     fullName: string;
@@ -10,13 +14,34 @@ interface IFormInput {
 }
 
 export default function Register() {
+    const navigate = useNavigate();
+
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm<IFormInput>();
 
-    const onSubmit = (data: IFormInput) => console.log(data);
+    const onSubmit = async (data: IFormInput) => {
+        const user: IUser = {
+            fullName: data.fullName,
+            birthDate: data.birthDate,
+            email: data.email,
+            password: data.password,
+        };
+
+        try {
+            await toast.promise(registerRequest(user), {
+                pending: "Registrando...",
+                success: "Conta criada com sucesso!",
+                error: "Algo deu errado!",
+            });
+
+            navigate("/login");
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     return (
         <div className="bg-lime-300 h-screen w-screen  grid grid-cols-2">
